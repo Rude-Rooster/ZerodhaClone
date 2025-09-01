@@ -2,23 +2,23 @@ services:
   - type: web
     name: zerodha-frontend
     env: node
-    buildCommand: cd frontend && npm install && npm run build
-    startCommand: cd frontend && npm start
     rootDir: frontend
+    buildCommand: npm install
+    startCommand: npm start
     plan: free
 
   - type: web
     name: zerodha-dashboard
     env: node
-    buildCommand: cd dashboard && npm install && npm run build
-    startCommand: cd dashboard && npm start
     rootDir: dashboard
+    buildCommand: npm install
+    startCommand: npm start
     plan: free
 
   - type: web
     name: zerodha-backend
     env: node
-    buildCommand: cd backend && npm install
-    startCommand: cd backend && npm start
     rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
     plan: free
