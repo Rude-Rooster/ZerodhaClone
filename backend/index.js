@@ -63,8 +63,27 @@ app.use(express.json())
 //   res.send("Done!");
 // });
 
+app.post("/holdings", async (req, res) => {
+  const { name,
+      qty,
+      avg,
+      price,
+      net} = req.body;
+  const userId = req.user.id; // take this from logged-in user (JWT/session)
+
+  const holding = new Holding({ userId,
+      name,
+      qty,
+      avg,
+      price,
+      net });
+  await holding.save();
+  res.json(Holding);
+});
+
 app.get("/allHoldings", async (req, res) => {
-  let allHoldings = await HoldingsModel.find({});
+  const userId = req.user.id;
+  let allHoldings = await HoldingsModel.find({userId});
   res.json(allHoldings);
 });
 
