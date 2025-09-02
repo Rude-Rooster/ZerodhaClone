@@ -63,7 +63,7 @@ app.use(express.json())
 //   res.send("Done!");
 // });
 
-app.post("/holdings", async (req, res) => {
+app.post("/allHoldings", async (req, res) => {
   const { name,
       qty,
       avg,
