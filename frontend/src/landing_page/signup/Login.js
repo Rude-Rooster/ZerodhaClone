@@ -42,7 +42,7 @@ function Login() {
         localStorage.setItem("token", jwtToken);
         localStorage.setItem("LoggedInUser", name);
         setTimeout(() => {
-          window.location.href = "https://zerodhaclone-qvqn.onrender.com"
+          window.location.href = "https://zerodhaclone-dashboard-g12k.onrender.com"
           // "http://localhost:3001/";
           navigate("/dashboard");
         }, 1000);
