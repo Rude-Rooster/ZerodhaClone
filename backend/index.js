@@ -1,4 +1,5 @@
 require("dotenv").config();
+import { v4 as uuidv4 } from "uuid";
 
 const express = require("express");
 const mongoose = require("mongoose");
@@ -63,7 +64,7 @@ app.use(express.json())
 // });
 
 app.get("/allHoldings", async (req, res) => {
-  let allHoldings = await HoldingsModel.find({});
+  let allHoldings = await HoldingsModel.find({userId: req.user.userId});
   res.json(allHoldings);
 });
 

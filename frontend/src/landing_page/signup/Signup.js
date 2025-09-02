@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import {handleSuccess, handleError} from "../../utils.js";
+import { v4 as uuidv4 } from "uuid";
 
 function Signup() {
   const [signupInfo, SetSignupInfo] = useState({
+    userId: uuidv4(),
     name:'',
     email:'',
     password:''
