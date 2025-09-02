@@ -42,7 +42,8 @@ function Login() {
         localStorage.setItem("token", jwtToken);
         localStorage.setItem("LoggedInUser", name);
         setTimeout(() => {
-          window.location.href = "http://localhost:3001/";
+          window.location.href = "https://zerodhaclone-qvqn.onrender.com"
+          // "http://localhost:3001/";
           navigate("/dashboard");
         }, 1000);
       } else if (error) {
