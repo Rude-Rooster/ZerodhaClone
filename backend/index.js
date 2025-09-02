@@ -13,7 +13,7 @@ const { PositionsModel } = require("./model/PositionsModel");
 const { HoldingsModel } = require("./model/HoldingsModel");
 const { OrdersModel } = require("./model/OrdersModel");
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8080 || "https://zerodhaclone-qvqn.onrender.com";
 const uri = process.env.MONGO_URL;
 
 const app = express();
