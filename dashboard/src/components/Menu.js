@@ -90,7 +90,8 @@ const Menu = () => {
           <li>
             <Link
               style={{ textDecoration: "none" }}
-              to="http://localhost:3000/"
+              to="https://zerodhaclone-frontend-mfhh.onrender.com"  
+              // http://localhost:3000/
               onClick={() => handleMenuClick(6)}
             >
               <p className={selectedMenu === 6 ? activeMenuClass : menuClass}>
