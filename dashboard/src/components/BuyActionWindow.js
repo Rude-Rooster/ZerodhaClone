@@ -9,10 +9,10 @@ import "./BuyActionWindow.css";
 
 const BuyActionWindow = ({ uid }) => {
   const [stockQuantity, setStockQuantity] = useState(1);
-  const [stockPrice, setStockPrice] = useState(0.0);
+  const [stockPrice, setStockPrice] = useState(0);
 
   const handleBuyClick = () => {
-    axios.post("http://localhost:8080/newOrder", {
+    axios.post("https://zerodhaclone-qvqn.onrender.com/newOrder", {
       name: uid,
       qty: stockQuantity,
       price: stockPrice,
