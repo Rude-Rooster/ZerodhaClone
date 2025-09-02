@@ -27,7 +27,7 @@ function Signup() {
       return handleError("name, email, password are required");
     }
     try{
-      const url = "https://zerodhaclone-qvqn.onrender.com" 
+      const url = "https://zerodhaclone-qvqn.onrender.com/auth/signup" 
 // "http://localhost:8080/auth/signup"; //backend url(port)
       const response = await fetch(url,{
         method:"POST",
